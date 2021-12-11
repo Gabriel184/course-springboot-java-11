@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gabriel.course.entities.Order;
 import com.gabriel.course.entities.Product;
 import com.gabriel.course.repositories.ProductRepository;
 
