@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gabriel.course.entities.Order;
-import com.gabriel.course.services.OrderSevice;
+import com.gabriel.course.services.OrderService;
 
 @RestController
 @RequestMapping(value = "/orders")
 public class OrderResource {
 	
 	@Autowired
-	private OrderSevice orderService; 
+	private OrderService orderService; 
 	
 	@GetMapping
 	public ResponseEntity<List<Order>> findAll(){

@@ -11,7 +11,7 @@ import com.gabriel.course.repositories.UserRepository;
 
 
 @Service
-public class UserSevice {
+public class UserService {
 
 	@Autowired
 	private UserRepository repository;

@@ -11,7 +11,7 @@ import com.gabriel.course.repositories.CategoryRepository;
 
 
 @Service
-public class CategorySevice {
+public class CategoryService {
 
 	@Autowired
 	private CategoryRepository repository;

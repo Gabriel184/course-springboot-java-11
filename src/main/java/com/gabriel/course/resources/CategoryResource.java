@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gabriel.course.entities.Category;
-import com.gabriel.course.services.CategorySevice;
+import com.gabriel.course.services.CategoryService;
 
 @RestController
 @RequestMapping(value = "/categories")
 public class CategoryResource {
 	
 	@Autowired
-	private CategorySevice categorySevice; 
+	private CategoryService categorySevice; 
 	
 	@GetMapping
 	public ResponseEntity<List<Category>> findAll(){
