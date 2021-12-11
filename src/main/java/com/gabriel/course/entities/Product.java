@@ -8,6 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -24,7 +27,10 @@ public class Product implements Serializable{
 	private Double price;
 	private String imgUrl;
 	
-	@Transient
+	@ManyToMany
+	@JoinTable(name = "PRODUCT_CATEGORY", 
+	joinColumns = @JoinColumn(name = "pcy_prd_id"),
+	inverseJoinColumns = @JoinColumn(name = "pcy_cat_id"))
 	private Set<Category> categories = new HashSet<>();
 	
 	public Product() {}
